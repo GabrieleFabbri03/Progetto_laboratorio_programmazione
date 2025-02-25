@@ -224,6 +224,9 @@ Progetto_Laboratorio_Programmazione_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Progetto_Laboratorio_Programmazione_SOURCE_DIR:STATIC=/home/VioletHideaki/CLionProjects/Progetto_Laboratorio_Programmazione
 
+//The directory containing a CMake configuration file for SFML.
+SFML_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SFML
+
 
 ########################
 # INTERNAL cache entries

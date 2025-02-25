@@ -1,25 +1,30 @@
+#include <SFML/Graphics.hpp>
 #include <iostream>
-
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
-    // <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
-
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code.
-        // We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/>
-        // breakpoint for you, but you can always add more by pressing
-        // <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+#include <vector>
+//creazione Griglia
+class Grid {
+private:
+    int gridSize;
+    int cellSize;
+    sf::Vector2i start; //punto di partenza
+    sf::Vector2i end;   //punto di arrivo
+    std::vector<std::vector<bool>> obstacles; //matrice di ostacoli
+public:
+    //costruttore
+    Grid(int gridSize, int cellSize)
+    : gridSize(gridSize), cellSize(cellSize), start(0,0), end(gridSize - 1, gridSize - 1){
+        setGridSize(gridSize);
     }
-
-    return 0;
-}
-
-// TIP See CLion help at <a
-// href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
-//  Also, you can try interactive lessons for CLion by selecting
-//  'Help | Learn IDE Features' from the main menu.
+    void setGridSize(int newSize) {
+        gridSize = newSize;
+        obstacles = std::vector<std::vector<bool>>(gridSize,std::vector<bool>(gridSize,false));
+    }
+    int getGridSize() const{ return gridSize;}
+    int getCellSize() const{ return cellSize;}
+    const sf::Vector2i& getStart()const{ return start;}
+    const sf::Vector2i& getEnd()const{ return end;}
+    bool isObstacle(int x, int y)const{return obstacles[x][y];}
+//aggiorna fine mappa
+    void updateEnd() {
+        end = sf::Vector2i(gridSize - 1, gridSize - 1);
+    }
