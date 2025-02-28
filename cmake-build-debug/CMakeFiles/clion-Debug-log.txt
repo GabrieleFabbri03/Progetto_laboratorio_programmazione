@@ -1,4 +1,4 @@
-/snap/clion/322/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/322/bin/ninja/linux/x64/ninja -G Ninja -S /home/VioletHideaki/CLionProjects/Progetto_Laboratorio_Programmazione -B /home/VioletHideaki/CLionProjects/Progetto_Laboratorio_Programmazione/cmake-build-debug
+/snap/clion/326/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/326/bin/ninja/linux/x64/ninja -G Ninja -S /home/VioletHideaki/CLionProjects/Progetto_Laboratorio_Programmazione -B /home/VioletHideaki/CLionProjects/Progetto_Laboratorio_Programmazione/cmake-build-debug
 CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
   CMake.
@@ -8,6 +8,6 @@ CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
 
 
 -- Found SFML 2.6.1 in /usr/lib/x86_64-linux-gnu/cmake/SFML
--- Configuring done (0.1s)
--- Generating done (0.0s)
+-- Configuring done (0.0s)
+-- Generating done (0.1s)
 -- Build files have been written to: /home/VioletHideaki/CLionProjects/Progetto_Laboratorio_Programmazione/cmake-build-debug

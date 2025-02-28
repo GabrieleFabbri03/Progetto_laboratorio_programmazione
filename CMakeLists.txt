@@ -10,6 +10,9 @@ add_executable(Progetto_Laboratorio_Programmazione
         Grid.cpp
         Grid.h
         Node.cpp
-        Node.h)
+        Node.h
+        PathFinder.cpp
+        PathFinder.h
+)
 
 target_link_libraries(Progetto_Laboratorio_Programmazione sfml-graphics sfml-window sfml-system)
